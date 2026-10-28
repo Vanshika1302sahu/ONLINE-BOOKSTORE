@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f7fa;
+        }
+
+        .box {
+            width: 65%;
+            margin: 45px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #bbb;
+        }
+
+        h1 {
+            color: #0D47A1;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 14px 0 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 96%;
+            padding: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #1565C0;
+            color: white;
+            border: 0;
+        }
+    </style>
+
+    <script>
+        function validate() {
+            let name = document.getElementById('name').value.trim();
+            let pass = document.getElementById('pass').value;
+
+            if (!/^[A-Za-z]+$/.test(name) || name.length < 6) {
+                alert('Name must contain alphabets and be at least 6 characters');
+                return false;
+            }
+
+            if (pass.length < 6) {
+                alert('Password must be at least 6 characters');
+                return false;
+            }
+
+            alert('Name and Password are valid');
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Registration Validation</h1>
+
+        <form onsubmit="return validate()">
+            <label>Name</label>
+            <input id="name" type="text"
+                   placeholder="Minimum 6 alphabets">
+
+            <label>Password</label>
+            <input id="pass" type="password"
+                   placeholder="Minimum 6 characters">
+
+            <button type="submit">Validate</button>
+        </form>
+    </div>
+</body>
+</html>

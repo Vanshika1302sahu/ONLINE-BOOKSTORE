@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Links</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f7fa;
+            background-image: radial-gradient(#d6e8ff 1px, transparent 1px);
+            background-size: 22px 22px;
+        }
+
+        .box {
+            width: 75%;
+            margin: 50px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #bbb;
+            text-align: center;
+        }
+
+        a:link {
+            color: #1565C0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: #7B1FA2;
+        }
+
+        a:hover {
+            color: white;
+            background: #21f333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        .note {
+            padding: 20px;
+            background: #eef6ff;
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>CSS Link States</h1>
+
+        <p>
+            <a href="https://example.com">
+                Move over / click this link
+            </a>
+        </p>
+
+        <div class="note">
+            Background repetition is controlled with background-repeat.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<body style="font-family:Arial;background:#f5f7fa">
+<div style="width:70%;margin:30px auto;padding:25px;background:white;border-radius:12px;box-shadow:0 3px 12px #bbb">
+<h2 style="color:#0D47A1">Registration Page</h2>
+<form>
+Name:<br>
+<input type="text" placeholder="Name"><br><br>
+Password:<br>
+<input type="password" placeholder="Password"><br><br>
+Email:<br>
+<input type="email" placeholder="Email"><br><br>
+Phone Number:<br>
+<input type="tel" placeholder="Phone Number"><br><br>
+Sex:<br>
+<input type="radio" name="sex" value="Male"> Male
+<input type="radio" name="sex" value="Female"> Female
+<input type="radio" name="sex" value="Other"> Other<br><br>
+Date of Birth:<br>
+<select name="day">
+<option value="">Day</option>
+<script>
+for(let i=1;i<=31;i++){
+document.write("<option>"+i+"</option>");
+}
+</script>
+</select>
+<select name="month">
+<option value="">Month</option>
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+</select>
+<select name="year">
+<option value="">Year</option>
+<script>
+for(let i=2026;i>=1980;i--){
+document.write("<option>"+i+"</option>");
+}
+</script>
+</select><br><br>
+Languages Known:<br>
+<input type="checkbox" name="language" value="English"> English
+<input type="checkbox" name="language" value="Telugu"> Telugu
+<input type="checkbox" name="language" value="Hindi"> Hindi
+<input type="checkbox" name="language" value="Tamil"> Tamil<br><br>
+Address:<br>
+<textarea name="address" rows="4" cols="40" placeholder="Enter your address"></textarea><br><br>
+<button type="submit">Register</button>
+</form>
+</div>
+</body>
+</html>
